@@ -1,0 +1,12 @@
+[user]
+    email = zhewei.hu@nxp.com
+    name = zhewei hu
+[alias]
+    st = status -s -b
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[difftool]
+	promt = false
