@@ -13,8 +13,17 @@ let g:Powerline_symbols='fancy'
 let Powerline_symbols='compatible'
 
 " ===================== configurations for  NERDTree =====================
-" 
+"
 " let NERDTreeIgnore = ['*.o']
+
+" ===================== configurations for Unite =====================
+"
+let g:unite_source_history_yank_enable = 1
+try
+    let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
 
 " ===================== configurations for solarized colorscheme =====================
 "
@@ -25,11 +34,40 @@ try
     colorscheme solarized
 catch
 endtry
-
 " ===================== configurations for taglist ====================
 "
+" let g:clang_complete_copen = 1
+" let g:clang_library_path = '/usr/lib/llvm-3.5/lib/libclang.so'
+" let g:clang_c_options = '-std=gnu11'
+" let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
+
+" ===================== configurations for YouCompleteMe ====================
+" load the .ycm_extra_conf.py file without prompt
+" let g:ycm_confirm_extra_conf=0
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:clang_library_path = "/usr/lib/llvm-3.5/lib/libclang.so.1"
+
+" YouCompleteMe features
+let g:ycm_complete_in_comments=1
+" let g:ycm_collect_identifiers_from_tags_files=1
+" inoremap <leader>; <C-x><C-o>
+"
+set completeopt-=preview
+let g:ycm_min_num_of_chars_for_completion=1
+"
+let g:ycm_cache_omnifunc=0
+"
+let g:ycm_seed_identifiers_with_syntax=1
+"
+let g:ycm_key_invoke_completion = '<M-;>'
+"
+"nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
+
+" ===================== configurations for tagbar ====================
 " show tagbar on the left
 let g:tagbar_left = 1
+" gain focus on open
+let g:tagbar_autofocus = 1
 " shows tags for only one file
 let Tlist_Show_One_File = 1
 " exits vim if only taglist window is the last one

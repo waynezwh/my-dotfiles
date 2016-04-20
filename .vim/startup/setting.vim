@@ -12,6 +12,7 @@ set shiftwidth=4
 set expandtab
 set autochdir
 set nohlsearch
+set noswapfile
 
 " common settings
  if &term =~ '256color'
@@ -35,11 +36,12 @@ set history=1000
 set number
 set nocompatible
 " set list listchars=tab:"*",trail:.,extends:>,precedes:<,eol:¬
-
+set list
+set listchars=tab:▸\ ,trail:.,extends:>,precedes:<,eol:¬
 " fast sourcings.vimrc
 map <silent> <leader>ss :source ~/.vimrc<cr>
 " fast opening .vimrc
 map <silent> <leader>ee :tabnew ~/.vimrc<cr>
 " reload .vimrc once its been changed
-autocmd! bufwritepost .vimrc source ~/.vimrc
+" autocmd! bufwritepost .vimrc source ~/.vimrc
 

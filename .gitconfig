@@ -4,9 +4,13 @@
 [alias]
     st = status -s -b
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
+    dd = difftool
 [core]
 	editor = vim
 [diff]
 	tool = vimdiff
 [difftool]
 	promt = false
+	prompt = false
+[merge]
+	tool = vimdiff

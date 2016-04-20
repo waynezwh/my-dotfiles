@@ -8,15 +8,38 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin(path)
 
-" my Bundle here:
-" 
+" My bundle here:
+"
 " original repos on github
 Plugin 'VundleVim/Vundle.vim' " Vundle itself
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Rip-Rip/clang_complete'
+Plugin 'jlanzarotta/bufexplorer'
+" Unite
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
 
+let g:unite_source_history_yank_enable = 1
+try
+    let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
+" search a file in the filetree
+" nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <space><space> :<C-u>Unite -start-insert file_rec/async<cr>
+
+" " reset not it is <C-l> normally
+" :nnoremap <space>r <Plug>(unite_restart)
+
+Plugin 'rking/ag.vim'
+" --- type ° to search the word in all files in the current dir
+nmap ° :Ag <c-r>=expand("<cword>")<cr><cr>
+nnoremap <space>/ :Ag
 "......................................
 " vim scripts repos
 "Plugin 'taglist.vim'
