@@ -83,5 +83,5 @@ filetype plugin indent on    " required
 " wayne's key mapping
 source ~/.vim/startup/setting.vim
 source ~/.vim/startup/mappings.vim
-"source ~/.vim/startup/taglist.vim
 source ~/.vim/startup/pluginConf.vim
+
