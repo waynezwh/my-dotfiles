@@ -14,11 +14,12 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
+vno <C-j> <Nop>
 
-no <C-e> <C-e>j
-no <C-y> <C-y>k
+no <C-e> <C-e>
+no <C-y> <C-y>
 
-" Remapping <Ctrl-c> to <Esc> 
+" Remapping <Ctrl-c> to <Esc>
 imap <C-c> <Esc>
 " ino <Esc> <Nop>
 

@@ -14,14 +14,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Vundle itself
 " Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'junegunn/vim-easy-align'
+" Plugin 'junegunn/vim-easy-align'
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'Rip-Rip/clang_complete'
+Plugin 'vim-scripts/c.vim'
 Plugin 'jlanzarotta/bufexplorer'
 " Unite
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rking/ag.vim'
 
 let g:unite_source_history_yank_enable = 1
 try
@@ -36,7 +38,6 @@ nnoremap <space><space> :<C-u>Unite -start-insert file_rec/async<cr>
 " " reset not it is <C-l> normally
 " :nnoremap <space>r <Plug>(unite_restart)
 
-Plugin 'rking/ag.vim'
 " --- type ° to search the word in all files in the current dir
 nmap ° :Ag <c-r>=expand("<cword>")<cr><cr>
 nnoremap <space>/ :Ag

@@ -10,9 +10,10 @@ set tabstop=4
 set shiftwidth=4
 "set softtabstop=4
 set expandtab
-set autochdir
+"set autochdir
 set nohlsearch
 set noswapfile
+set ignorecase
 
 " common settings
  if &term =~ '256color'
@@ -25,9 +26,15 @@ scriptencoding utf-8
 set encoding=utf-8
 "set term=screen-256color
 "set term=xterm-256color
-set textwidth=80 "set textwidth
+" set the column width
+"set textwidth=80
+set colorcolumn=80
 " allow wildmenu
 set wildmenu
+" ignore *.o *.obj *.pyc files in wildmenu
+set wildignore=*.o,*.obj,*.pyc
+" DO NOT have to save while do buffer-switch
+set hidden
 set showcmd
 set ruler
 set incsearch
@@ -38,7 +45,8 @@ set nocompatible
 " set list listchars=tab:"*",trail:.,extends:>,precedes:<,eol:¬
 set list
 set listchars=tab:▸\ ,trail:.,extends:>,precedes:<,eol:¬
-" fast sourcings.vimrc
+
+" fast sourcing .vimrc
 map <silent> <leader>ss :source ~/.vimrc<cr>
 " fast opening .vimrc
 map <silent> <leader>ee :tabnew ~/.vimrc<cr>
